@@ -1,22 +1,21 @@
-import type { FC } from "react";
-import { NavLink as RouterLink } from "react-router-dom";
+import React from "react";
 import clsx from "clsx";
+import styles from "./Button.module.css";
 
-interface Props {
-  to: string;
-  label: string;
+export interface NavLinkProps
+  extends React.ButtonHTMLAttributes<HTMLInputElement> {
+  color?: "primary" | "success" | "info" | "warning" | "error";
+  size?: "small" | "medium" | "large";
 }
 
-export const NavLink: FC<Props> = ({ to, label }) => (
-  <RouterLink
-    to={to}
-    className={({ isActive }) =>
-      clsx(
-        "px-3 py-2 rounded-md text-sm font-medium transition",
-        isActive ? "bg-blue-600 text-white" : "text-gray-700 hover:bg-gray-100"
-      )
-    }
-  >
-    {label}
-  </RouterLink>
+export const NavLink = React.forwardRef<HTMLInputElement, NavLinkProps>(
+  ({ color = "primary", size = "medium", className, ...rest }, ref) => (
+    <NavLink
+      ref={ref}
+      className={clsx(styles.button, styles[color], styles[size], className)}
+      {...rest}
+    />
+  )
 );
+
+NavLink.displayName = "NavLink";
