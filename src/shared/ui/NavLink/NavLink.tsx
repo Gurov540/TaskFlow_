@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import styles from "./Button.module.css";
+import styles from "./NavLink.module.css";
 
 export interface NavLinkProps
   extends React.ButtonHTMLAttributes<HTMLInputElement> {
