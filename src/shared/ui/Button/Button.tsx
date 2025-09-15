@@ -4,7 +4,7 @@ import styles from "./Button.module.css";
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  color?: "primary" | "success" | "info" | "warning" | "error";
+  color?: "primary" | "success";
   size?: "small" | "medium" | "large";
 }
 
