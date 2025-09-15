@@ -1,6 +1,11 @@
 .button {
-  color: white;
-  border-radius: 6px;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
   transition: background-color 0.2s ease;
   outline: none;
 }
@@ -16,38 +21,19 @@
 
 /* Цвета */
 .primary {
-  background-color: #6366f1;
+  background-color: #4361ee;
 }
 .primary:hover {
-  background-color: #4f46e5;
+  background-color: rgb(56, 47, 236);
 }
 
 .success {
-  background-color: #22c55e;
+  color: #4361ee;
+  border: 1px solid #4361ee;
 }
 .success:hover {
-  background-color: #16a34a;
-}
-
-.info {
-  background-color: #3b82f6;
-}
-.info:hover {
-  background-color: #2563eb;
-}
-
-.warning {
-  background-color: #f59e0b;
-}
-.warning:hover {
-  background-color: #d97706;
-}
-
-.error {
-  background-color: #ef4444;
-}
-.error:hover {
-  background-color: #dc2626;
+  color: #fff;
+  background-color: #4361ee;
 }
 
 /* Размеры */
