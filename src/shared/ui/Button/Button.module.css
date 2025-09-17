@@ -1,0 +1,56 @@
+.button {
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  background-color: #fff;
+  color: #fff;
+  border: none;
+  border-radius: 0.5rem;
+  transition: background-color 0.2s ease;
+  outline: none;
+}
+.button:focus {
+  outline: none;
+}
+
+.button:focus-visible {
+  box-shadow: 0 0 0 2px #6366f1, 0 0 0 4px white; /* аналог ring */
+}
+
+.button:disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Цвета */
+.primary {
+  background-color: #4361ee;
+}
+.primary:hover {
+  background-color: rgb(56, 47, 236);
+}
+
+.success {
+  color: #4361ee;
+  border: 1px solid #4361ee;
+}
+.success:hover {
+  color: #fff;
+  background-color: #4361ee;
+}
+
+/* Размеры */
+.small {
+  padding: 0.375rem 0.625rem; /* 6px 10px */
+  font-size: 0.75rem; /* 12px */
+}
+
+.medium {
+  padding: 0.5rem 0.875rem; /* 8px 14px */
+  font-size: 0.875rem; /* 14px */
+}
+
+.large {
+  padding: 0.625rem 1rem; /* 10px 16px */
+  font-size: 1rem; /* 16px */
+}
