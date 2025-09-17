@@ -1,7 +1,11 @@
 import "./App.css";
-
+import { Header } from "./widgets/Header";
 function App() {
-  return <></>;
+  return (
+    <>
+      <Header></Header>
+    </>
+  );
 }
 
 export default App;
