@@ -2,9 +2,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 24px;
-  background-color: #f9fafb; /* светлый фон */
-  border-bottom: 1px solid #e5e7eb; /* тонкая линия снизу */
+  padding: 12px 2rem;
+  background-color: rgb(255, 255, 255);
+  border-bottom: 1px solid #e5e7eb;
 }
 
 .logo {

@@ -8,14 +8,13 @@ export const Header: React.FC = () => {
     <header className={styles.header}>
       <div className={styles.logo}>
         <Logo></Logo>
-        <span>MyApp</span>
       </div>
       <nav className={styles.nav}>
         <Button color="primary" size="medium">
-          Войти
+          Login
         </Button>
         <Button color="success" size="medium">
-          Регистрация
+          Registration
         </Button>
       </nav>
     </header>
