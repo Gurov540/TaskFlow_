@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Header.module.css";
 import { Button } from "../../shared/ui/Button/";
 import { Logo } from "../../shared/ui/Logo/";
+import { Link } from "react-router-dom";
 
 export const Header: React.FC = () => {
   return (
@@ -10,6 +11,8 @@ export const Header: React.FC = () => {
         <Logo></Logo>
       </div>
       <nav className={styles.nav}>
+        <Link to="/">Главная</Link>
+        <Link to="/about">О проекте</Link>
         <Button color="primary" size="medium">
           Login
         </Button>
