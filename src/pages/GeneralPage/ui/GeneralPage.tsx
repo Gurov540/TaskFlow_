@@ -1,4 +1,4 @@
-import "./GeneralPage.modal.css";
+import "./GeneralPage.modul.css";
 import { Button } from "../../../shared/ui/Button";
 
 export const GeneralPage = () => {
