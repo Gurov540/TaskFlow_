@@ -1,4 +1,4 @@
-import "./LogReg.modul.css";
+import "./LogReg.module.css";
 
 export const LogRegPage = () => {
   return (
