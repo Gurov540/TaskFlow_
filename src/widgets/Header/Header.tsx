@@ -1,30 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./Header.module.css";
 import { Button } from "../../shared/ui/Button";
 import { Logo } from "../../shared/ui/Logo";
+import { useAuthModal } from "../../shared/lib/hooks/useAuthModal";
 import { AuthModal } from "../../shared/ui/AuthModal";
 
 export const Header: React.FC = () => {
-  const [isAuthModalOpen, setIsAuthModalOpen] = useState(false);
-  const [authMode, setAuthMode] = useState<"login" | "register">("login");
-
-  const handleLoginClick = () => {
-    setAuthMode("login");
-    setIsAuthModalOpen(true);
-  };
-
-  const handleRegisterClick = () => {
-    setAuthMode("register");
-    setIsAuthModalOpen(true);
-  };
-
-  const handleCloseModal = () => {
-    setIsAuthModalOpen(false);
-  };
-
-  const handleSwitchMode = () => {
-    setAuthMode((prev) => (prev === "login" ? "register" : "login"));
-  };
+  const authModal = useAuthModal();
 
   return (
     <>
@@ -33,20 +15,28 @@ export const Header: React.FC = () => {
           <Logo />
         </div>
         <nav className={styles.nav}>
-          <Button color="primary" size="medium" onClick={handleLoginClick}>
+          <Button
+            color="primary"
+            size="medium"
+            onClick={authModal.openLoginModal}
+          >
             Login
           </Button>
-          <Button color="success" size="medium" onClick={handleRegisterClick}>
+          <Button
+            color="success"
+            size="medium"
+            onClick={authModal.openRegisterModal}
+          >
             Registration
           </Button>
         </nav>
       </header>
 
       <AuthModal
-        isOpen={isAuthModalOpen}
-        onClose={handleCloseModal}
-        mode={authMode}
-        onSwitchMode={handleSwitchMode}
+        isOpen={authModal.isAuthModalOpen}
+        onClose={authModal.closeAuthModal}
+        mode={authModal.authMode}
+        onSwitchMode={authModal.switchAuthMode}
       />
     </>
   );
