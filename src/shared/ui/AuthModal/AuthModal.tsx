@@ -36,6 +36,12 @@ export const AuthModal: React.FC<AuthModalProps> = ({
     if (e.target === e.currentTarget) onClose();
   };
 
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Логика отправки формы
+    console.log(`${mode} form submitted`);
+  };
+
   return (
     <div className={styles.overlay} onClick={handleOverlayClick}>
       <div className={styles.modal}>
@@ -45,15 +51,26 @@ export const AuthModal: React.FC<AuthModalProps> = ({
 
         <h2>{mode === "login" ? "Вход" : "Регистрация"}</h2>
 
-        <form className={styles.form}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           {mode === "register" && (
-            <input type="text" placeholder="Имя" className={styles.input} />
+            <input
+              type="text"
+              placeholder="Имя"
+              className={styles.input}
+              required
+            />
           )}
-          <input type="email" placeholder="Email" className={styles.input} />
+          <input
+            type="email"
+            placeholder="Email"
+            className={styles.input}
+            required
+          />
           <input
             type="password"
             placeholder="Пароль"
             className={styles.input}
+            required
           />
 
           <button type="submit" className={styles.submitButton}>
