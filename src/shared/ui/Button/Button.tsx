@@ -1,19 +1,25 @@
 import React from "react";
-import clsx from "clsx";
 import styles from "./Button.module.css";
 
-export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+interface ButtonProps {
+  children: React.ReactNode;
   color?: "primary" | "success";
   size?: "small" | "medium" | "large";
+  onClick?: () => void;
 }
 
-export const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ color = "primary", size = "medium", className, ...rest }, ref) => (
+export const Button: React.FC<ButtonProps> = ({
+  children,
+  color = "primary",
+  size = "medium",
+  onClick,
+}) => {
+  return (
     <button
-      ref={ref}
-      className={clsx(styles.button, styles[color], styles[size], className)}
-      {...rest}
-    />
-  )
-);
+      className={`${styles.button} ${styles[color]} ${styles[size]}`}
+      onClick={onClick}
+    >
+      {children}
+    </button>
+  );
+};
