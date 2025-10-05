@@ -2,6 +2,7 @@ import "./GeneralPage.css";
 import { Button } from "../../../shared/ui/Button";
 import { useAuthModal } from "../../../shared/lib/hooks/useAuthModal";
 import { AuthModal } from "../../../shared/ui/AuthModal";
+import { SideBar } from "../../../widgets/SideBar";
 
 export const GeneralPage = () => {
   const authModal = useAuthModal();
@@ -85,6 +86,7 @@ export const GeneralPage = () => {
             </div>
           </div>
         </section>
+        <SideBar></SideBar>
       </main>
 
       <AuthModal
