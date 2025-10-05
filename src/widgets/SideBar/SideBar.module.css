@@ -1,0 +1,87 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 260px;
+  min-height: 100vh;
+  background: #fff;
+  border-right: 1px solid #e5e7eb;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  border-radius: 0.75rem;
+}
+
+.currentBoard {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #1f2937;
+  background: #f3f4f6;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+}
+
+.nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  margin-top: 1rem;
+}
+
+.recent {
+  margin-top: 2rem;
+}
+
+.recentTitle {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+}
+
+.recentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.recentItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9fafb;
+  border-radius: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  transition: background 0.2s;
+}
+
+.recentItem:hover {
+  background: #f3f4f6;
+}
+
+.recentInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.boardName {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+}
+
+.boardMeta {
+  font-size: 0.75rem;
+  color: #6b7280;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  color: #2563eb;
+}
