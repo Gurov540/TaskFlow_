@@ -1,0 +1,11 @@
+.icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  transition: opacity 0.2s ease;
+}
+
+.icon:hover {
+  opacity: 0.8;
+}
