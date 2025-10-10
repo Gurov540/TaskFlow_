@@ -1,12 +1,8 @@
 import "./GeneralPage.css";
 import { Button } from "../../../shared/ui/Button";
-import { useAuthModal } from "../../../shared/lib/hooks/useAuthModal";
-import { AuthModal } from "../../../shared/ui/AuthModal";
-import { SideBar } from "../../../widgets/SideBar";
+import { Icon } from "../../../shared/ui/Icon";
 
 export const GeneralPage = () => {
-  const authModal = useAuthModal();
-
   return (
     <>
       <main className="main">
@@ -20,11 +16,7 @@ export const GeneralPage = () => {
             miss a deadline again!
           </h6>
           <div className="hero-buttons">
-            <Button
-              color="primary"
-              size="large"
-              onClick={authModal.openRegisterModal}
-            >
+            <Button color="primary" size="large">
               Get Started - Sign Up Now
             </Button>
             <Button color="success" size="large">
@@ -38,7 +30,9 @@ export const GeneralPage = () => {
           <div className="features">
             <div className="features-card">
               <div className="features-icon">
-                <i className="fas fa-columns"></i>
+                <i className="fas fa-columns">
+                  <Icon name="columns"></Icon>
+                </i>
               </div>
               <div className="features-container">
                 <h3 className="features-card-heading">Customizable Boards</h3>
@@ -50,7 +44,9 @@ export const GeneralPage = () => {
             </div>
             <div className="features-card">
               <div className="features-icon">
-                <i className="fas fa-tasks"></i>
+                <i className="fas fa-tasks">
+                  <Icon name="pen"></Icon>
+                </i>
               </div>
               <div className="features-container">
                 <h3 className="features-card-heading">Task Management</h3>
@@ -62,7 +58,9 @@ export const GeneralPage = () => {
             </div>
             <div className="features-card">
               <div className="features-icon">
-                <i className="fas fa-chart-line"></i>
+                <i className="fas fa-chart-line">
+                  <Icon name="pen"></Icon>
+                </i>
               </div>
               <div className="features-container">
                 <h3 className="features-card-heading">Dashboard Analytics</h3>
@@ -74,7 +72,9 @@ export const GeneralPage = () => {
             </div>
             <div className="features-card">
               <div className="features-icon">
-                <i className="fas fa-bell"></i>
+                <i className="fas fa-bell">
+                  <Icon name="pen"></Icon>
+                </i>
               </div>
               <div className="features-container">
                 <h3 className="features-card-heading">Real-time Updates</h3>
@@ -86,15 +86,7 @@ export const GeneralPage = () => {
             </div>
           </div>
         </section>
-        <SideBar></SideBar>
       </main>
-
-      <AuthModal
-        isOpen={authModal.isAuthModalOpen}
-        onClose={authModal.closeAuthModal}
-        mode={authModal.authMode}
-        onSwitchMode={authModal.switchAuthMode}
-      />
     </>
   );
 };
