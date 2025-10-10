@@ -4,6 +4,7 @@
   gap: 0.5rem;
   width: 100%;
   padding: 0.5rem 0.75rem;
+  border: none;
   border-radius: 0.5rem;
   background: transparent;
   color: var(--text-secondary, #444);
@@ -14,12 +15,13 @@
 }
 
 .tab:hover {
-  background: #f5f6f8;
+  color: #444;
+  background: #f3f4f6;
 }
 
 .active {
-  background: #e7f0ff;
-  color: #2563eb;
+  background: #4361ee;
+  color: #fff;
   font-weight: 600;
 }
 
