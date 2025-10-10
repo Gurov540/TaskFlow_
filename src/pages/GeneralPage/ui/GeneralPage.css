@@ -1,9 +1,12 @@
 .main {
+  display: flex;
+  flex-direction: column;
   width: 992px;
   min-width: 65vw;
   max-width: 100%;
   padding: 4rem 1rem;
   margin: 0 auto;
+  gap: 2rem;
 }
 
 .heroSection {
